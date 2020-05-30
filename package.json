@@ -1,0 +1,22 @@
+{
+  "name": "re-dio",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "isomorphic-unfetch": "^3.0.0",
+    "next": "9.4.2",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "sass": "^1.26.5",
+    "swr": "^0.2.2"
+  },
+  "devDependencies": {
+    "babel-plugin-inline-react-svg": "^1.1.1"
+  }
+}

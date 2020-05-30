@@ -1,0 +1,147 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*:focus {
+  outline: none;
+}
+
+button::-moz-focus-inner,
+input[type="reset"]::-moz-focus-inner,
+input[type="button"]::-moz-focus-inner,
+input[type="submit"]::-moz-focus-inner {
+  border: none;
+}
+
+.Main {
+  height: 100vh;
+  background-color: rgba(4, 154, 215, 1);
+
+  @supports (-moz-appearance: none) {
+    background-color: rgba(4, 154, 215, 0.92);
+  }
+
+  &__Top,
+  &__Bottom {
+    width: 100%;
+    display: flex;
+  }
+
+  &__Top {
+    &__Logo {
+      width: 50%;
+      height: 70vh;
+      padding: 2rem;
+
+      &__Image {
+        height: 90%;
+      }
+    }
+
+    &__Player {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 50%;
+      height: 70vh;
+      padding: 2rem;
+
+      &__Button {
+        $color: #fedc00;
+        $highlight: darken($color, 5%);
+        $duration: 0.4s;
+        $sin: 0.866;
+        $size: 200px;
+
+        border: $size * 0.1 solid $color;
+        border-radius: 50%;
+        margin: 20px;
+        padding: $size * 0.25;
+        width: $size;
+        height: $size;
+        font-size: 0;
+        white-space: nowrap;
+        text-align: center;
+        cursor: pointer;
+        background-color: transparent;
+        outline: none;
+
+        &,
+        .left,
+        .right,
+        &:before {
+          box-sizing: content-box;
+          display: inline-block;
+          vertical-align: middle;
+          transition: border $duration, width $duration, height $duration,
+            margin $duration;
+          transition-tiomig-function: cubic-bezier(1, 0, 0, 1);
+        }
+
+        &:before {
+          content: "";
+          height: $size;
+        }
+
+        &.pause {
+          .left,
+          .right {
+            margin: 0;
+            border-left: $size * 0.33 solid $color;
+            border-top: 0 solid transparent;
+            border-bottom: 0 solid transparent;
+            height: $size * $sin;
+          }
+
+          .left {
+            border-right: $size * 0.2 solid transparent;
+          }
+        }
+
+        &.play {
+          $border: $size/4;
+
+          .left {
+            margin-left: $size / 6;
+            border-left: $size * $sin / 2 solid $color;
+            border-top: $border solid transparent;
+            border-bottom: $border solid transparent;
+            border-right: 0px solid transparent;
+            height: $size - 2 * $border;
+          }
+
+          .right {
+            margin: 0;
+            border-left: $size * $sin / 2 solid $color;
+            border-top: $border solid transparent;
+            border-bottom: $border solid transparent;
+            height: 0px;
+          }
+        }
+
+        &:hover {
+          border-color: $highlight;
+
+          .left,
+          .right {
+            border-left-color: $highlight;
+          }
+        }
+      }
+
+      &__Title {
+        margin-top: 1.5rem;
+        color: white;
+        font-size: 2rem;
+        font-style: italic;
+
+        &__Separator {
+          margin: 0 1rem;
+        }
+      }
+    }
+  }
+}
