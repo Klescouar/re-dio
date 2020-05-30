@@ -1,8 +1,12 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState } from "react";
 import fetch from "isomorphic-unfetch";
 import classNames from "classnames";
 import Head from "next/head";
 import { useInterval } from "../utils/useInterval";
+import FacebookIcon from "../static/facebook.svg";
+import MailIcon from "../static/mail.svg";
+import InstagramIcon from "../static/instagram.svg";
+import HeartIcon from "../static/heart.svg";
 
 export default function Home() {
   const [currentSong, setCurrentSong] = useState({});
@@ -64,14 +68,41 @@ export default function Home() {
           </div>
         </div>
         <div className="Main__Bottom">
-          <div className="Main__Bottom__Item">
-            <p>Soutenir Ré-Dio</p>
+          <div className="Main__Bottom__Support">
+            <a
+              className="Main__Bottom__Support__Link"
+              href="https://www.paypal.com"
+              target="_blank"
+            >
+              <HeartIcon />
+              Soutenir Ré-Dio
+              <HeartIcon />
+            </a>
           </div>
-          <div className="Main__Bottom__Item"></div>
+          <div className="Main__Bottom__Socials">
+            <a
+              href="https://www.facebook.com"
+              target="_blank"
+              className="Main__Bottom__Socials__Link"
+            >
+              <FacebookIcon />
+            </a>
+            <a
+              href="https://www.instagram.com"
+              target="_blank"
+              className="Main__Bottom__Socials__Link"
+            >
+              <InstagramIcon />
+            </a>
+            <a
+              href="mailto:re-dio@mail.com"
+              className="Main__Bottom__Socials__Link"
+            >
+              <MailIcon />
+            </a>
+          </div>
         </div>
       </main>
-
-      <footer></footer>
     </div>
   );
 }

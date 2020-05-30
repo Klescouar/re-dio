@@ -144,4 +144,59 @@ input[type="submit"]::-moz-focus-inner {
       }
     }
   }
+
+  &__Bottom {
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__Socials,
+    &__Support {
+      width: 50%;
+    }
+
+    &__Socials {
+      display: flex;
+      justify-content: center;
+
+      &__Link {
+        background-color: white;
+        border-radius: 50%;
+        height: 2.5rem;
+        width: 2.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 1rem;
+
+        svg {
+          height: 1.5rem;
+          width: 1.5rem;
+        }
+
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.911);
+        }
+      }
+    }
+
+    &__Support {
+      text-align: center;
+
+      &__Link {
+        text-decoration: none;
+        color: white;
+        font-size: 2rem;
+
+        svg {
+          position: relative;
+          top: 0.5rem;
+          height: 2.7rem;
+          width: 2.7rem;
+          margin: 0 1rem;
+        }
+      }
+    }
+  }
 }
