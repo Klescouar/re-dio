@@ -3,10 +3,10 @@ import fetch from "isomorphic-unfetch";
 import classNames from "classnames";
 import Head from "next/head";
 import { useInterval } from "../utils/useInterval";
-import FacebookIcon from "../static/facebook.svg";
-import MailIcon from "../static/mail.svg";
-import InstagramIcon from "../static/instagram.svg";
-import HeartIcon from "../static/heart.svg";
+import FacebookIcon from "../public/facebook.svg";
+import MailIcon from "../public/mail.svg";
+import InstagramIcon from "../public/instagram.svg";
+import HeartIcon from "../public/heart.svg";
 
 export default function Home() {
   const [currentSong, setCurrentSong] = useState({});
@@ -31,7 +31,7 @@ export default function Home() {
     <div className="container">
       <Head>
         <title>Ré-dio</title>
-        <link rel="icon" href="/logo.jpg" />
+        <link rel="icon" href="/logo.ico" />
       </Head>
 
       <main className="Main">
