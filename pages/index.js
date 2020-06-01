@@ -41,17 +41,42 @@ export default function Home() {
       </Head>
 
       <main className="Main">
-        <div className="Main__Top">
-          <div className="Main__Top__Logo">
+        <div className="Main__Left">
+          <div className="Main__Left__Logo">
             <img
-              className="Main__Top__Logo__Image"
-              src="/logo.jpg"
+              className="Main__Left__Logo__Image"
+              src="/logo.png"
               alt="Ré-Dio"
             />
           </div>
-          <div className="Main__Top__Player">
+          <p className="Main__Left__Slogan">La web radio qui bouge la re</p>
+          <div className="Main__Left__Share">
+            <a
+              href="https://www.facebook.com"
+              target="_blank"
+              className="Main__Left__Share__Link"
+            >
+              <FacebookIcon />
+            </a>
+            <a
+              href="https://www.instagram.com"
+              target="_blank"
+              className="Main__Left__Share__Link"
+            >
+              <InstagramIcon />
+            </a>
+            <a
+              href="mailto:re-dio@mail.com"
+              className="Main__Left__Share__Link"
+            >
+              <MailIcon />
+            </a>
+          </div>
+        </div>
+        <div className="Main__Right">
+          <div className="Main__Right__Player">
             <button
-              className={classNames("Main__Top__Player__Button", {
+              className={classNames("Main__Right__Player__Button", {
                 pause: !mutedStatus,
                 play: mutedStatus,
               })}
@@ -60,9 +85,9 @@ export default function Home() {
               <span className="left"></span>
               <span className="right"></span>
             </button>
-            <p className="Main__Top__Player__Title">
+            <p className="Main__Right__Player__Title">
               {currentSong.title}
-              <span className="Main__Top__Player__Title__Separator">-</span>
+              <span className="Main__Right__Player__Title__Separator">-</span>
               {currentSong.artist}
             </p>
             <audio
@@ -72,47 +97,39 @@ export default function Home() {
               src="https://www.radioking.com/play/poncho"
             ></audio>
           </div>
-        </div>
-        <div className="Main__Bottom">
-          <div className="Main__Bottom__Support">
+          <div className="Main__Right__Support">
             <button
-              className="Main__Bottom__Support__Button"
+              className="Main__Right__Support__Button"
               onClick={handleModal}
             >
-              Soutenir Re-Dio
+              Pour nous soutenir clique sur notre petit coeur :
               <HeartIcon />
             </button>
-          </div>
-          <div className="Main__Bottom__Socials">
-            <a
-              href="https://www.facebook.com"
-              target="_blank"
-              className="Main__Bottom__Socials__Link"
-            >
-              <FacebookIcon />
-            </a>
-            <a
-              href="https://www.instagram.com"
-              target="_blank"
-              className="Main__Bottom__Socials__Link"
-            >
-              <InstagramIcon />
-            </a>
-            <a
-              href="mailto:re-dio@mail.com"
-              className="Main__Bottom__Socials__Link"
-            >
-              <MailIcon />
-            </a>
           </div>
         </div>
       </main>
       <Rodal visible={modalIsOpen} onClose={handleModal} animation="slideDown">
         <div className="Main__Modal">
-          <p>LES BONNES BLAGUES À JOJO</p>
-          <a href="https://www.paypal.com" target="_blank">
-            LE BON LIEN PAYPAL
-          </a>
+          <p className="Main__Modal__Text">
+            Si vous voulez soutenir Ré-dio, payez nous un ti-punch (emoji ti
+            punch ou pas loin je ne le trouve pas mais il existe) ! En effet,
+            cette web radio à un coût de fonctionnement d'environ 600 euros à
+            l'année soit 120 ti-punchs à 5 euros (tarif Ile de Ré). Le ti-punch
+            est notre carburant nécessaire pour créer, innover et améliorer ce
+            beau projet et vous pouvez y contribuer ici ----->
+            <a
+              className="Main__Modal__Text__Link"
+              href="https://www.paypal.com"
+              target="_blank"
+            >
+              lien PayPal
+            </a>
+            .
+          </p>
+          <p className="Main__Modal__Subtitle">
+            L'abus d'alcool est dangereux pour la santé. Mangez 5 citrons verts
+            par jour. Pour votre santé : bougez buvez et vive l'Ile de Ré
+          </p>
         </div>
       </Rodal>
     </div>

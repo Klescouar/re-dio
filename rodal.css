@@ -15,20 +15,23 @@
 /* -- mask -- */
 .rodal-mask {
   position: absolute;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.5);
 }
 
 /* -- dialog -- */
 .rodal-dialog {
+  min-width: 60% !important;
+  min-height: 60% !important;
   position: absolute;
-  top: 2rem;
+  top: 0;
+  bottom: 0;
   left: 0;
   right: 0;
   margin: auto;
   z-index: 101;
-  padding: 15px;
   background: #fff;
   border-radius: 3px;
+  overflow: hidden;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 
