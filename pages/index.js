@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import fetch from "isomorphic-unfetch";
 import classNames from "classnames";
 import Head from "next/head";
+import Rodal from "rodal";
 import { useInterval } from "../utils/useInterval";
 import FacebookIcon from "../public/facebook.svg";
 import MailIcon from "../public/mail.svg";
@@ -11,6 +12,7 @@ import HeartIcon from "../public/heart.svg";
 export default function Home() {
   const [currentSong, setCurrentSong] = useState({});
   const [mutedStatus, setMutedStatus] = useState(true);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
   const audio = useRef(null);
 
   useInterval(() => {
@@ -25,6 +27,10 @@ export default function Home() {
 
   const handleClick = () => {
     setMutedStatus(!mutedStatus);
+  };
+
+  const handleModal = () => {
+    setModalIsOpen(!modalIsOpen);
   };
 
   return (
@@ -69,15 +75,13 @@ export default function Home() {
         </div>
         <div className="Main__Bottom">
           <div className="Main__Bottom__Support">
-            <a
-              className="Main__Bottom__Support__Link"
-              href="https://www.paypal.com"
-              target="_blank"
+            <button
+              className="Main__Bottom__Support__Button"
+              onClick={handleModal}
             >
+              Soutenir Re-Dio
               <HeartIcon />
-              Soutenir Ré-Dio
-              <HeartIcon />
-            </a>
+            </button>
           </div>
           <div className="Main__Bottom__Socials">
             <a
@@ -103,6 +107,14 @@ export default function Home() {
           </div>
         </div>
       </main>
+      <Rodal visible={modalIsOpen} onClose={handleModal} animation="slideDown">
+        <div className="Main__Modal">
+          <p>LES BONNES BLAGUES À JOJO</p>
+          <a href="https://www.paypal.com" target="_blank">
+            LE BON LIEN PAYPAL
+          </a>
+        </div>
+      </Rodal>
     </div>
   );
 }

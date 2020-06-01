@@ -8,6 +8,11 @@
   outline: none;
 }
 
+@font-face {
+  font-family: "Funky";
+  src: url("./public/ChunkyFunks.ttf");
+}
+
 button::-moz-focus-inner,
 input[type="reset"]::-moz-focus-inner,
 input[type="button"]::-moz-focus-inner,
@@ -18,6 +23,7 @@ input[type="submit"]::-moz-focus-inner {
 .Main {
   height: 100vh;
   background-color: rgba(4, 154, 215, 1);
+  font-family: "Funky";
 
   @supports (-moz-appearance: none) {
     background-color: rgba(4, 154, 215, 0.92);
@@ -31,12 +37,12 @@ input[type="submit"]::-moz-focus-inner {
 
   &__Top {
     &__Logo {
-      width: 50%;
+      width: 35%;
       height: 70vh;
       padding: 2rem;
 
       &__Image {
-        height: 90%;
+        width: 100%;
       }
     }
 
@@ -45,7 +51,7 @@ input[type="submit"]::-moz-focus-inner {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      width: 50%;
+      width: 65%;
       height: 70vh;
       padding: 2rem;
 
@@ -56,7 +62,7 @@ input[type="submit"]::-moz-focus-inner {
         $sin: 0.866;
         $size: 200px;
 
-        border: $size * 0.1 solid $color;
+        border: $size * 0.05 solid $color;
         border-radius: 50%;
         margin: 20px;
         padding: $size * 0.25;
@@ -151,9 +157,12 @@ input[type="submit"]::-moz-focus-inner {
     justify-content: center;
     align-items: center;
 
-    &__Socials,
     &__Support {
-      width: 50%;
+      width: 35%;
+    }
+
+    &__Socials {
+      width: 65%;
     }
 
     &__Socials {
@@ -171,6 +180,7 @@ input[type="submit"]::-moz-focus-inner {
         margin: 0 1rem;
 
         svg {
+          fill: #fedc00;
           height: 1.5rem;
           width: 1.5rem;
         }
@@ -184,10 +194,13 @@ input[type="submit"]::-moz-focus-inner {
     &__Support {
       text-align: center;
 
-      &__Link {
-        text-decoration: none;
+      &__Button {
         color: white;
         font-size: 2rem;
+        background-color: transparent;
+        border: none;
+        font-family: "Funky";
+        cursor: pointer;
 
         svg {
           position: relative;
@@ -198,5 +211,13 @@ input[type="submit"]::-moz-focus-inner {
         }
       }
     }
+  }
+
+  &__Modal {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }
