@@ -49,28 +49,32 @@ export default function Home() {
               alt="Ré-Dio"
             />
           </div>
-          <p className="Main__Left__Slogan">La web radio qui bouge la re</p>
-          <div className="Main__Left__Share">
-            <a
-              href="https://www.facebook.com"
-              target="_blank"
-              className="Main__Left__Share__Link"
-            >
-              <FacebookIcon />
-            </a>
-            <a
-              href="https://www.instagram.com"
-              target="_blank"
-              className="Main__Left__Share__Link"
-            >
-              <InstagramIcon />
-            </a>
-            <a
-              href="mailto:re-dio@mail.com"
-              className="Main__Left__Share__Link"
-            >
-              <MailIcon />
-            </a>
+          <div className="Main__Left__Infos">
+            <p className="Main__Left__Infos__Slogan">
+              La web radio qui bouge la re
+            </p>
+            <div className="Main__Left__Infos__Share">
+              <a
+                href="https://www.facebook.com"
+                target="_blank"
+                className="Main__Left__Infos__Share__Link"
+              >
+                <FacebookIcon />
+              </a>
+              <a
+                href="https://www.instagram.com"
+                target="_blank"
+                className="Main__Left__Infos__Share__Link"
+              >
+                <InstagramIcon />
+              </a>
+              <a
+                href="mailto:re-dio@mail.com"
+                className="Main__Left__Infos__Share__Link"
+              >
+                <MailIcon />
+              </a>
+            </div>
           </div>
         </div>
         <div className="Main__Right">
