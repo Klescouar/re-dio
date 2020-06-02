@@ -1,0 +1,25 @@
+.Shares {
+  display: flex;
+  justify-content: center;
+
+  &__Link {
+    border-radius: 50%;
+    background-color: rgb(6, 128, 177);
+    height: 3rem;
+    width: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1rem;
+
+    svg {
+      fill: #fedc00;
+      height: 1.5rem;
+      width: 1.5rem;
+    }
+
+    &:hover {
+      background-color: rgb(6, 137, 189);
+    }
+  }
+}

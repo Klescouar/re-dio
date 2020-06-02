@@ -1,5 +1,8 @@
-import "../styles.scss";
-import "../rodal.css";
+import "../styles/global.scss";
+import "../styles/rodal.css";
+import "../styles/player.scss";
+import "../styles/shares.scss";
+import "../styles/modal.scss";
 
 export default ({ Component, pageProps }) => {
   return <Component {...pageProps} />;

@@ -1,0 +1,100 @@
+.Player {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 2rem;
+
+  &__Button {
+    $color: rgba(4, 154, 215, 1);
+    $highlight: darken($color, 5%);
+    $duration: 0.4s;
+    $sin: 0.866;
+    $size: 150px;
+
+    border: none;
+    border-radius: 50%;
+    margin: 20px;
+    padding: $size * 0.25;
+    width: $size;
+    height: $size;
+    font-size: 0;
+    white-space: nowrap;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    padding: 4rem;
+    transition: all 1s ease-in;
+
+    &,
+    .left,
+    .right,
+    &:before {
+      box-sizing: content-box;
+      display: inline-block;
+      vertical-align: middle;
+      transition: border $duration, width $duration, height $duration,
+        margin $duration;
+      transition-tiomig-function: cubic-bezier(1, 0, 0, 1);
+    }
+
+    &:before {
+      content: "";
+      height: $size;
+    }
+
+    &.pause {
+      background: linear-gradient(145deg, #e5c600, #ffeb00);
+      box-shadow: 6px 6px 13px #d8bb00, -6px -6px 13px #fffd00;
+      .left,
+      .right {
+        margin: 0;
+        border-left: $size * 0.33 solid $color;
+        border-top: 0 solid transparent;
+        border-bottom: 0 solid transparent;
+        height: $size * $sin;
+      }
+
+      .left {
+        border-right: $size * 0.2 solid transparent;
+      }
+    }
+
+    &.play {
+      $border: $size/4;
+      background: linear-gradient(145deg, #ffeb00, #e5c600);
+      box-shadow: 10px 10px 20px #d8bb00, -10px -10px 20px #fffd00;
+
+      .left {
+        margin-left: $size / 6;
+        border-left: $size * $sin / 2 solid $color;
+        border-top: $border solid transparent;
+        border-bottom: $border solid transparent;
+        border-right: 0px solid transparent;
+        height: $size - 2 * $border;
+      }
+
+      .right {
+        margin: 0;
+        border-left: $size * $sin / 2 solid $color;
+        border-top: $border solid transparent;
+        border-bottom: $border solid transparent;
+        height: 0px;
+      }
+    }
+  }
+
+  &__Title {
+    margin-top: 1.5rem;
+    color: rgba(4, 154, 215, 1);
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+    font-style: italic;
+
+    &__Separator {
+      margin: 0 1rem;
+    }
+  }
+}

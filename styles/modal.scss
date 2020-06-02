@@ -1,0 +1,27 @@
+.Modal {
+  height: 100%;
+  background-color: rgba(4, 154, 215, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+  line-height: 2rem;
+  color: white;
+
+  &__Image {
+    margin-bottom: 2rem;
+  }
+
+  &__Text {
+    &__Link {
+      margin-left: 0.5rem;
+    }
+  }
+
+  &__Subtitle {
+    margin-top: 2rem;
+    font-style: italic;
+    font-size: 0.9rem;
+  }
+}
