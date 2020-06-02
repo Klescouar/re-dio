@@ -49,7 +49,7 @@ export default function Home() {
           </div>
           <div className="Main__Left__Infos">
             <p className="Main__Left__Infos__Slogan">
-              La web radio qui bouge la re
+              La web radio qui bouge la Ré
             </p>
             <Shares />
           </div>
@@ -66,7 +66,7 @@ export default function Home() {
               className="Main__Right__Support__Button"
               onClick={handleModal}
             >
-              Pour nous soutenir clique sur notre petit coeur :
+              Pour soutenir la Ré-dio clique ici :
               <HeartIcon />
             </button>
           </div>
