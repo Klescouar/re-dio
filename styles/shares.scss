@@ -13,14 +13,14 @@
     margin: 0 1rem;
 
     @media (max-width: 768px) {
-      height: 1.8rem;
-      width: 1.8rem;
+      height: 2rem;
+      width: 2rem;
     }
 
     svg {
       fill: #fedc00;
-      height: 2rem;
-      width: 2rem;
+      height: 1.5rem;
+      width: 1.5rem;
 
       @media (max-width: 768px) {
         height: 1rem;
