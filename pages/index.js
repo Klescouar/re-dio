@@ -14,7 +14,7 @@ export default function Home() {
   const audio = useRef(null);
 
   useInterval(() => {
-    fetch("https://api.radioking.io/widget/radio/poncho/track/current")
+    fetch("https://api.radioking.io/widget/radio/rere/track/current")
       .then((r) => r.json())
       .then((data) => {
         if (data.title !== currentSong.title) {
@@ -49,7 +49,7 @@ export default function Home() {
           </div>
           <div className="Main__Left__Infos">
             <p className="Main__Left__Infos__Slogan">
-              La web radio qui bouge la Ré
+              La Web radio qui fait bouger la Ré
             </p>
             <Shares />
           </div>
@@ -66,7 +66,7 @@ export default function Home() {
               className="Main__Right__Support__Button"
               onClick={handleModal}
             >
-              Pour soutenir la Ré-dio clique ici :
+              Pour soutenir Ré-dio :
               <HeartIcon />
             </button>
           </div>
