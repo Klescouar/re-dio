@@ -1,5 +1,5 @@
 import "../styles/global.scss";
-import "../styles/rodal.css";
+import "../styles/rodal.scss";
 import "../styles/player.scss";
 import "../styles/shares.scss";
 import "../styles/modal.scss";

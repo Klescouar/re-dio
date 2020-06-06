@@ -12,6 +12,13 @@
   border-top: 5px solid rgb(66, 168, 236);
   animation: animate 1s linear infinite;
   filter: blur(1px);
+
+  @media (max-width: 768px) {
+    height: 150px;
+    width: 150px;
+    margin: 2.3rem 0;
+    border-top: 5px solid #ffeb00;
+  }
 }
 
 @keyframes animate {

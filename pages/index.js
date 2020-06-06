@@ -5,6 +5,7 @@ import Player from "../components/Player";
 import Shares from "../components/Shares";
 import Modal from "../components/Modal";
 import { useInterval } from "../utils/useInterval";
+import { useScreenSize } from "../utils/useScreenSize";
 import HeartIcon from "../public/heart.svg";
 
 export default function Home() {
@@ -12,7 +13,10 @@ export default function Home() {
   const [mutedStatus, setMutedStatus] = useState(true);
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const audio = useRef(null);
+  const screenSize = useScreenSize();
+  const isMobile = screenSize === "small";
 
+  console.log(screenSize);
   useInterval(() => {
     fetch("https://api.radioking.io/widget/radio/rere/track/current")
       .then((r) => r.json())
@@ -51,16 +55,27 @@ export default function Home() {
             <p className="Main__Left__Infos__Slogan">
               La Web radio qui fait bouger la Ré
             </p>
-            <Shares />
+            {!isMobile && <Shares />}
           </div>
         </div>
-        <div className="Main__Right">
+        {isMobile && (
           <Player
             mutedStatus={mutedStatus}
             handleClick={handleClick}
             currentSong={currentSong}
             audio={audio}
           />
+        )}
+        <div className="Main__Right">
+          {!isMobile && (
+            <Player
+              mutedStatus={mutedStatus}
+              handleClick={handleClick}
+              currentSong={currentSong}
+              audio={audio}
+            />
+          )}
+          {isMobile && <Shares />}
           <div className="Main__Right__Support">
             <button
               className="Main__Right__Support__Button"

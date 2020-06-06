@@ -7,17 +7,24 @@
   width: 100%;
   padding: 2rem;
 
+  @media (max-width: 768px) {
+    padding: 0 1rem 1rem 1rem;
+  }
+
   &__Button {
+    $mobileSize: 50px;
+    $mobileColor: #ffeb00;
+    $mobileBorder: $mobileSize/4;
     $color: rgba(4, 154, 215, 1);
     $highlight: darken($color, 5%);
     $duration: 0.4s;
     $sin: 0.866;
     $size: 150px;
+    $border: $size/4;
 
     border: none;
     border-radius: 50%;
     margin: 20px;
-    padding: $size * 0.25;
     width: $size;
     height: $size;
     font-size: 0;
@@ -27,6 +34,13 @@
     outline: none;
     padding: 4rem;
     transition: all 1s ease-in;
+
+    @media (max-width: 768px) {
+      padding: 3rem;
+      margin-top: 0;
+      width: $mobileSize;
+      height: $mobileSize;
+    }
 
     &,
     .left,
@@ -43,11 +57,21 @@
     &:before {
       content: "";
       height: $size;
+
+      @media (max-width: 768px) {
+        height: $mobileSize;
+      }
     }
 
     &.pause {
       background: linear-gradient(145deg, #e5c600, #ffeb00);
       box-shadow: 6px 6px 13px #d8bb00, -6px -6px 13px #fffd00;
+
+      @media (max-width: 768px) {
+        background: linear-gradient(145deg, #048bc2, #04a5e6);
+        box-shadow: 18px 18px 36px #0383b7, -18px -18px 36px #05b1f7;
+      }
+
       .left,
       .right {
         margin: 0;
@@ -55,17 +79,30 @@
         border-top: 0 solid transparent;
         border-bottom: 0 solid transparent;
         height: $size * $sin;
+
+        @media (max-width: 768px) {
+          border-left: $mobileSize * 0.33 solid $mobileColor;
+          height: $mobileSize * $sin;
+        }
       }
 
       .left {
         border-right: $size * 0.2 solid transparent;
+
+        @media (max-width: 768px) {
+          border-right: $mobileSize * 0.2 solid transparent;
+        }
       }
     }
 
     &.play {
-      $border: $size/4;
       background: linear-gradient(145deg, #ffeb00, #e5c600);
       box-shadow: 10px 10px 20px #d8bb00, -10px -10px 20px #fffd00;
+
+      @media (max-width: 768px) {
+        background: linear-gradient(145deg, #04a5e6, #048bc2);
+        box-shadow: 18px 18px 36px #0383b7, -18px -18px 36px #05b1f7;
+      }
 
       .left {
         margin-left: $size / 6;
@@ -74,6 +111,14 @@
         border-bottom: $border solid transparent;
         border-right: 0px solid transparent;
         height: $size - 2 * $border;
+
+        @media (max-width: 768px) {
+          border-top: $mobileBorder solid transparent;
+          border-bottom: $mobileBorder solid transparent;
+          margin-left: $mobileSize / 6;
+          border-left: $mobileSize * $sin / 2 solid $mobileColor;
+          height: $mobileSize - 2 * $mobileBorder;
+        }
       }
 
       .right {
@@ -82,6 +127,12 @@
         border-top: $border solid transparent;
         border-bottom: $border solid transparent;
         height: 0px;
+
+        @media (max-width: 768px) {
+          border-top: $mobileBorder solid transparent;
+          border-bottom: $mobileBorder solid transparent;
+          border-left: $mobileSize * $sin / 2 solid $mobileColor;
+        }
       }
     }
   }
@@ -91,6 +142,12 @@
     color: rgba(4, 154, 215, 1);
     font-size: 2.5rem;
     letter-spacing: 0.1rem;
+
+    @media (max-width: 768px) {
+      color: white;
+      font-size: 1rem;
+      margin-top: 1rem;
+    }
 
     &__Separator {
       margin: 0 1rem;
