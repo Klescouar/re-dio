@@ -40,7 +40,6 @@ export default function Home() {
         <title>Ré-dio - La Web radio qui fait bouger la Ré</title>
         <meta name="description" content="Ré-dio est une radio réthaise" />
         <meta name="keywords" content="Ré-dio, ré-dio, Rédio, rédio" />
-        <meta name="author" content="Le Scouarnec Kevin" />
         <meta
           property="og:title"
           content="Ré-dio - La Web radio qui fait bouger la Ré"
