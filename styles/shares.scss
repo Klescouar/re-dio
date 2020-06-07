@@ -11,6 +11,9 @@
     justify-content: center;
     align-items: center;
     margin: 0 1.2rem;
+    background: linear-gradient(145deg, #04a5e6, #048bc2);
+    box-shadow: 3px 3px 6px #0383b7, -3px -3px 6px #05b1f7;
+    border: 0.0625rem solid transparent;
 
     @media (max-width: 768px) {
       height: 3rem;
@@ -29,7 +32,7 @@
     }
 
     &:hover {
-      background-color: rgb(6, 137, 189);
+      background: #049ad7;
     }
   }
 }
