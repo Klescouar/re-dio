@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from "react";
+import React, { useRef, useState } from "react";
 import fetch from "isomorphic-unfetch";
 import Head from "next/head";
 import Player from "../components/Player";
@@ -12,16 +12,9 @@ export default function Home() {
   const [currentSong, setCurrentSong] = useState({});
   const [mutedStatus, setMutedStatus] = useState(true);
   const [modalIsOpen, setModalIsOpen] = useState(false);
-  const [playerIsReady, setPlayerIsReady] = useState(false);
   const audio = useRef(null);
   const screenSize = useScreenSize();
   const isMobile = screenSize === "small";
-
-  useEffect(() => {
-    fetch("https://www.radioking.com/play/rere").then(() =>
-      setPlayerIsReady(true)
-    );
-  });
 
   useInterval(() => {
     fetch("https://api.radioking.io/widget/radio/rere/track/current")
@@ -98,7 +91,6 @@ export default function Home() {
               mutedStatus={mutedStatus}
               handleClick={handleClick}
               currentSong={currentSong}
-              playerIsReady={playerIsReady}
               audio={audio}
             />
           )}

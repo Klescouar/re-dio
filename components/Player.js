@@ -6,12 +6,11 @@ export default function Player({
   mutedStatus,
   handleClick,
   currentSong,
-  playerIsReady,
   audio,
 }) {
   return (
     <div className="Player">
-      {currentSong.title && playerIsReady ? (
+      {currentSong.title ? (
         <>
           <button
             className={classNames("Player__Button", {
