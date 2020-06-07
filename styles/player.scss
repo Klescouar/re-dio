@@ -12,14 +12,14 @@
   }
 
   &__Button {
-    $mobileSize: 50px;
+    $mobileSize: 6rem;
     $mobileColor: #ffeb00;
     $mobileBorder: $mobileSize/4;
     $color: rgba(4, 154, 215, 1);
     $highlight: darken($color, 5%);
     $duration: 0.4s;
     $sin: 0.866;
-    $size: 150px;
+    $size: 125px;
     $border: $size/4;
 
     border: none;
@@ -36,7 +36,7 @@
     transition: all 1s ease-in;
 
     @media (max-width: 768px) {
-      padding: 3rem;
+      padding: 4rem;
       margin-top: 0;
       width: $mobileSize;
       height: $mobileSize;
@@ -140,12 +140,12 @@
   &__Title {
     margin-top: 1.5rem;
     color: rgba(4, 154, 215, 1);
-    font-size: 2.5rem;
-    letter-spacing: 0.1rem;
+    font-size: 4rem;
+    letter-spacing: 0.2rem;
 
     @media (max-width: 768px) {
       color: white;
-      font-size: 1rem;
+      font-size: 2rem;
       margin-top: 1rem;
     }
 

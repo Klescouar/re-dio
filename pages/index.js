@@ -16,7 +16,6 @@ export default function Home() {
   const screenSize = useScreenSize();
   const isMobile = screenSize === "small";
 
-  console.log(screenSize);
   useInterval(() => {
     fetch("https://api.radioking.io/widget/radio/rere/track/current")
       .then((r) => r.json())

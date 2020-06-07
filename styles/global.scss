@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-size: 62.5%;
 }
 
 *:focus {
@@ -21,9 +22,8 @@ input[type="submit"]::-moz-focus-inner {
 }
 
 .Main {
-  height: 100vh;
+  min-height: 100vh;
   font-family: "Funky";
-  height: 100vh;
   display: flex;
 
   @media (max-width: 768px) {
@@ -33,12 +33,14 @@ input[type="submit"]::-moz-focus-inner {
   }
 
   &__Left {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     width: 40%;
     background-color: rgb(4, 154, 215);
 
     @media (max-width: 768px) {
+      min-height: unset;
       width: 100%;
     }
 
@@ -46,7 +48,7 @@ input[type="submit"]::-moz-focus-inner {
       padding: 4rem 4rem 0 4rem;
 
       @media (max-width: 768px) {
-        padding: 1rem 1rem 0 1rem;
+        padding: 0 1rem;
         margin: auto;
       }
 
@@ -73,15 +75,15 @@ input[type="submit"]::-moz-focus-inner {
       }
 
       &__Slogan {
-        font-size: 2.7rem;
+        font-size: 3.5rem;
         color: white;
         font-weight: bold;
         text-align: center;
         margin-bottom: 3rem;
 
         @media (max-width: 768px) {
-          font-size: 1.2rem;
-          margin-bottom: 1rem;
+          font-size: 2rem;
+          margin: 1rem 0 0;
         }
       }
     }
@@ -89,7 +91,7 @@ input[type="submit"]::-moz-focus-inner {
 
   &__Right {
     position: relative;
-    height: 100%;
+    min-height: 100vh;
     width: 60%;
     display: flex;
     flex-direction: column;
@@ -101,6 +103,7 @@ input[type="submit"]::-moz-focus-inner {
     @media (max-width: 768px) {
       width: 100%;
       height: unset;
+      min-height: unset;
       background-color: transparent;
       box-shadow: none;
     }
@@ -116,12 +119,13 @@ input[type="submit"]::-moz-focus-inner {
       @media (max-width: 768px) {
         position: relative;
         bottom: unset;
+        margin-top: 1rem;
       }
 
       &__Button {
         text-align: center;
         color: rgba(4, 154, 215, 1);
-        font-size: 2rem;
+        font-size: 3rem;
         background-color: transparent;
         border: none;
         font-family: "Funky";
@@ -130,7 +134,7 @@ input[type="submit"]::-moz-focus-inner {
 
         @media (max-width: 768px) {
           color: white;
-          font-size: 1.2rem;
+          font-size: 1.8rem;
           margin-top: 0.5rem;
         }
 
@@ -142,8 +146,8 @@ input[type="submit"]::-moz-focus-inner {
           margin-left: 1rem;
 
           @media (max-width: 768px) {
-            height: 1.6rem;
-            width: 1.6rem;
+            height: 2rem;
+            width: 2rem;
             margin-left: 0.5rem;
             top: 0.35rem;
           }

@@ -5,12 +5,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 3rem;
+  padding: 5rem;
   color: white;
   font-family: "Funky";
 
   @media (max-width: 768px) {
-    padding: 1.5rem;
+    padding: 3rem;
   }
 
   &__Image {
@@ -18,28 +18,34 @@
   }
 
   &__Text {
-    font-size: 1.5rem;
-    line-height: 2.5rem;
+    font-size: 2.4rem;
+    line-height: 3rem;
 
     @media (max-width: 768px) {
-      font-size: 1.2rem;
-      line-height: 1.5rem;
+      font-size: 2rem;
+      line-height: 2.3rem;
     }
 
     &__Link {
+      font-size: 2.4rem;
       margin-left: 0.5rem;
       font-weight: bold;
       color: white;
+
+      @media (max-width: 768px) {
+        font-size: 2rem;
+      }
     }
   }
 
   &__Subtitle {
     margin-top: 2rem;
     font-style: italic;
-    font-size: 1.1rem;
+    font-size: 1.5rem;
+    text-align: center;
 
     @media (max-width: 768px) {
-      font-size: 0.9rem;
+      font-size: 1.3rem;
       text-align: center;
     }
   }

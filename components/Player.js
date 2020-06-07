@@ -19,8 +19,8 @@ export default function Player({
             })}
             onClick={handleClick}
           >
-            <span className="left"></span>
-            <span className="right"></span>
+            <span className="left" />
+            <span className="right" />
           </button>
           <p className="Player__Title">
             {currentSong.title}
