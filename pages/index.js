@@ -37,7 +37,28 @@ export default function Home() {
   return (
     <div className="container">
       <Head>
-        <title>Ré-dio</title>
+        <title>Ré-dio - La Web radio qui fait bouger la Ré</title>
+        <meta name="description" content="Ré-dio est une radio réthaise" />
+        <meta name="keywords" content="Ré-dio, ré-dio, Rédio, rédio" />
+        <meta name="author" content="Le Scouarnec Kevin" />
+        <meta
+          property="og:title"
+          content="Ré-dio - La Web radio qui fait bouger la Ré"
+        />
+        <meta
+          property="og:description"
+          content="Ré-dio est une radio réthaise"
+        />
+        <meta
+          property="og:image"
+          content="https://www.re-dio.com/share-logo.png"
+        />
+        <meta property="og:url" content="https://re-dio.com" />
+        <meta
+          property="og:site_name"
+          content="Ré-dio - La Web radio qui fait bouger la Ré"
+        />
+        <meta property="fb:app_id" content="Ré-dio" />
         <link rel="icon" href="/logo.ico" />
       </Head>
 
