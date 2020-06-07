@@ -51,7 +51,7 @@ export default function Home() {
         />
         <meta
           property="og:image"
-          content="https://www.re-dio.com/share-logo.png"
+          content="https://www.re-dio.com/share-logo.jpg"
         />
         <meta property="og:url" content="https://re-dio.com" />
         <meta
