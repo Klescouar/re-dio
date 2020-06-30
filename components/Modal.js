@@ -14,7 +14,7 @@ export default function Modal({ modalIsOpen, handleModal }) {
           beau projet et vous pouvez y contribuer en cliquant dessus :
           <a
             className="Modal__Text__Link"
-            href="https://www.paypal.com"
+            href="https://www.paypal.me/johanbarrer1/5"
             target="_blank"
           >
             <img
