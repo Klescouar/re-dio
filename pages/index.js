@@ -17,7 +17,7 @@ export default function Home() {
   const isMobile = screenSize === "small";
 
   useInterval(() => {
-    fetch("https://api.radioking.io/widget/radio/rere/track/current")
+    fetch("https://api.radioking.io/widget/radio/re-dio-1/track/current")
       .then((r) => r.json())
       .then((data) => {
         if (data.title !== currentSong.title) {

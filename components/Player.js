@@ -31,7 +31,7 @@ export default function Player({
             muted={mutedStatus}
             autoPlay
             ref={audio}
-            src="https://www.radioking.com/play/rere"
+            src="https://www.radioking.com/play/re-dio-1"
           ></audio>
         </>
       ) : (
